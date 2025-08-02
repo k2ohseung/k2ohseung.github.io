@@ -189,11 +189,51 @@ function changeLanguage(lang) {
     ⏰ 영업시간: 오전 8시 ~ 오후 9시<br />
     문의사항은 전화로 부탁드립니다.</p>
     <div style="text-align:center; margin-top:2rem;">
-  <p>🔗 친구에게 공유하기</p>
-  <a href="https://line.me/R/msg/text/?종가집흑염소탕%0Ahttps://k2ohseung.github.io/jongga/" target="_blank">라인</a> |
-  <a href="https://twitter.com/intent/tweet?text=종가집흑염소탕&url=https://k2ohseung.github.io/jongga/" target="_blank">트위터</a> |
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://k2ohseung.github.io/jongga/" target="_blank">페이스북</a>
-</div>
+<section id="share">
+  <h2>🔗 공유하기</h2>
+  <p>가게 정보를 지인에게 공유해보세요!</p>
+
+  <div style="display:flex; gap: 1rem; flex-wrap:wrap; justify-content:center;">
+    
+    <!-- 카카오톡: 링크 복사 -->
+    <button onclick="copyLink()" style="padding:0.5rem 1rem; background:#fae100; color:#000; border:none; border-radius:4px; cursor:pointer;">
+      카카오톡으로 링크 복사 📋
+    </button>
+
+    <!-- 트위터(X) 공유 -->
+    <a href="https://twitter.com/intent/tweet?url=https://k2ohseung.github.io/jongga/&text=종가집흑염소탕%20추천!" 
+       target="_blank" rel="noopener noreferrer"
+       style="padding:0.5rem 1rem; background:#1da1f2; color:white; text-decoration:none; border-radius:4px;">
+      X (트위터) 공유
+    </a>
+
+    <!-- 페이스북 공유 -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://k2ohseung.github.io/jongga/" 
+       target="_blank" rel="noopener noreferrer"
+       style="padding:0.5rem 1rem; background:#4267B2; color:white; text-decoration:none; border-radius:4px;">
+      Facebook 공유
+    </a>
+
+    <!-- 인스타그램 안내 -->
+    <button onclick="alert('인스타그램은 공유 버튼이 없습니다.\n홈페이지 주소를 복사해서 사용하세요.');"
+            style="padding:0.5rem 1rem; background:#e1306c; color:white; border:none; border-radius:4px; cursor:pointer;">
+      Instagram 안내
+    </button>
+  </div>
+</section>
+
+<script>
+  function copyLink() {
+    const temp = document.createElement('input');
+    temp.value = 'https://k2ohseung.github.io/jongga/';
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    document.body.removeChild(temp);
+    alert('링크가 복사되었습니다! 카카오톡에 붙여넣기 하세요.');
+  }
+</script>
+
 
   </section>
 

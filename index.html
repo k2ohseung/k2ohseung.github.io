@@ -192,12 +192,12 @@ function changeLanguage(lang) {
 <section id="share">
   <!-- 모바일 브라우저 네이티브 공유 버튼 -->
 <section id="share">
-  <h2>🔗 공유하기</h2>
-  <p>가게 정보를 카카오톡 등으로 쉽게 공유하세요!</p>
+  <h2>🔗 共有する</h2>
+  <p>LINEなどでこのお店の情報を簡単に共有できます！</p>
 
   <button onclick="shareSite()" 
           style="padding:0.8rem 1.2rem; background:#333; color:white; border:none; border-radius:8px; cursor:pointer;">
-    📱 공유하기
+    📱 今すぐ共有
   </button>
 </section>
 
@@ -205,23 +205,21 @@ function changeLanguage(lang) {
   function shareSite() {
     if (navigator.share) {
       navigator.share({
-        title: '종가집 흑염소탕',
-        text: '대구 팔달시장 인근 보양식 전문점 – 종가집 흑염소탕',
-        url: 'https://k2ohseung.github.io/jongga/'
+        title: 'ジョンガチプ黒ヤギスープ',
+        text: '大邱の伝統健康食専門店「ジョンガチプ黒ヤギスープ」',
+        url: 'https://k2ohseung.github.io/jongga/index-ja.html'
       }).then(() => {
-        console.log('공유 완료');
+        console.log('共有完了');
       }).catch((err) => {
-        console.error('공유 실패', err);
-        alert('공유를 지원하지 않는 기기입니다.');
+        console.error('共有失敗', err);
+        alert('このデバイスでは共有機能がサポートされていません。リンクをコピーしてLINEで共有してください。');
       });
     } else {
-      alert('이 기기에서는 공유 기능이 지원되지 않습니다.\n링크를 복사해 공유해주세요.');
+      alert('このデバイスでは共有機能がサポートされていません。\nリンクをコピーしてLINEで共有してください。');
     }
   }
 </script>
 
-  </div>
-</section>
 
 <script>
   function copyLink() {

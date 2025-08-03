@@ -11,6 +11,9 @@
 </script>
 
   <head>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
   <!-- 파비콘 -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -59,8 +62,8 @@ function changeLanguage(lang) {
     <p>전통 보양 흑염소탕 전문</p>
   </header>
 <div style="text-align:center; margin-top: 1rem;">
-  <button onclick="changeLanguage('ko')">한국어</button>
-  <button onclick="changeLanguage('ja')">日本語</button>
+  <button class="btn" onclick="changeLanguage('ko')">한국어</button>
+  <button class="btn" onclick="changeLanguage('ja')">日本語</button>
 </div>
 
   <nav>
@@ -204,10 +207,7 @@ function changeLanguage(lang) {
   <h2>🔗 공유하기</h2>
   <p>가게 정보를 카카오톡 등으로 쉽게 공유하세요!</p>
 
-  <button onclick="shareSite()" 
-          style="padding:0.8rem 1.2rem; background:#333; color:white; border:none; border-radius:8px; cursor:pointer;">
-    📱 공유하기
-  </button>
+  <button class="btn" onclick="shareSite()">📱 공유하기</button>
 </section>
 
 <script>

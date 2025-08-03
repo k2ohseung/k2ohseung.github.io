@@ -154,22 +154,35 @@ function changeLanguage(lang) {
      近隣の<strong>ノウォン市場公営駐車場</strong> → 徒歩 約5分</p>
 </section>
 
-<section id="contact">
-  <h2>予約 / お問い合わせ</h2>
-  <p>📞 電話: 053-352-7135<br />
-  ⏰ 営業時間: 午前8時～午後9時<br />
-  お問い合わせはお電話でお願いします。</p>
+<section id="share">
+  <h2>🔗 共有する</h2>
+  <p>LINEなどでこのお店の情報を簡単に共有できます！</p>
 
-  <div style="text-align:center; margin-top:2rem;">
-    <h2>🔗 共有する</h2>
-    <p>カカオトークなどで簡単に共有できます！</p>
-
-    <button onclick="shareSite()" 
-            style="padding:0.8rem 1.2rem; background:#333; color:white; border:none; border-radius:8px; cursor:pointer;">
-      📱 共有する
-    </button>
-  </div>
+  <button onclick="shareSite()" 
+          style="padding:0.8rem 1.2rem; background:#333; color:white; border:none; border-radius:8px; cursor:pointer;">
+    📱 今すぐ共有
+  </button>
 </section>
+
+<script>
+  function shareSite() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'ジョンガチプ黒ヤギスープ',
+        text: '大邱の伝統健康食専門店「ジョンガチプ黒ヤギスープ」',
+        url: 'https://k2ohseung.github.io/jongga/index-ja.html'
+      }).then(() => {
+        console.log('共有完了');
+      }).catch((err) => {
+        console.error('共有失敗', err);
+        alert('このデバイスでは共有機能がサポートされていません。リンクをコピーしてLINEで共有してください。');
+      });
+    } else {
+      alert('このデバイスでは共有機能がサポートされていません。\nリンクをコピーしてLINEで共有してください。');
+    }
+  }
+</script>
+
 
 <script>
 function shareSite() {

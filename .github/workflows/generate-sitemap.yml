@@ -3,7 +3,10 @@ name: Generate sitemap
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"  # 매일 UTC 0시 = 한국 오전 9시
+    - cron: "0 0 * * *"  # 매일 9AM KST
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -18,13 +21,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt || true
-
       - name: Generate sitemap
         run: python generate-sitemap.py
 
-      - name: Commit sitemap
+      - name: Commit and push sitemap
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

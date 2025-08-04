@@ -3,7 +3,7 @@ name: Generate sitemap
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"  # 매일 9AM KST
+    - cron: "0 0 * * *"
 
 permissions:
   contents: write

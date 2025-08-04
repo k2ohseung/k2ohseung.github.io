@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://k2ohseung.github.io/sitemap.xml
+Sitemap: https://k2ohseung.github.io/jongga/sitemap.xml

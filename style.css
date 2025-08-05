@@ -14,13 +14,16 @@ header {
   color: white;
   padding: 1.5rem;
   text-align: center;
-  margin-bottom: 0.5rem;  /* ✅ 메뉴와 겹침 방지용 */
+  margin-bottom: 1.5rem;  /* ✅ 메뉴바랑 겹치지 않게 충분히 띄움 */
 }
 
-/* 언어 변경 버튼 */
+/* 언어 전환 버튼 정렬 */
 .language-switch {
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.language-switch .btn {
+  margin: 0 0.5rem;
 }
 
 /* 내비게이션 */
@@ -65,7 +68,7 @@ img {
   height: auto;
 }
 
-/* 반응형 준비 */
+/* 반응형 */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -96,7 +99,6 @@ button.btn {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  margin: 0.3rem;
 }
 button.btn:hover {
   background-color: #555;

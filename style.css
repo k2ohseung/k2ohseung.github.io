@@ -14,6 +14,13 @@ header {
   color: white;
   padding: 1.5rem;
   text-align: center;
+  margin-bottom: 0.5rem;  /* ✅ 메뉴와 겹침 방지용 */
+}
+
+/* 언어 변경 버튼 */
+.language-switch {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /* 내비게이션 */
@@ -22,12 +29,9 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: fixed;        /* ✅ 항상 화면 상단에 고정 */
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  border-bottom: 2px solid #444;   /* ✅ 테두리 효과 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* ✅ 살짝 그림자 */
 }
 nav a {
   color: white;
@@ -42,7 +46,6 @@ nav a:hover {
 /* 본문 섹션 */
 section {
   padding: 2rem;
-  padding-top: 6rem;  /* ✅ 메뉴바 높이만큼 여백 추가 (중요) */
   max-width: 800px;
   margin: auto;
 }
@@ -75,7 +78,6 @@ img {
   }
   section {
     padding: 1rem;
-    padding-top: 6rem; /* 고정 메뉴 고려 */
   }
   header, footer {
     padding: 1rem;
@@ -86,7 +88,7 @@ img {
 }
 
 /* 버튼 스타일 */
-button {
+button.btn {
   background-color: #3c3f58;
   color: white;
   padding: 0.8rem 1.2rem;
@@ -94,7 +96,8 @@ button {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  margin: 0.3rem;
 }
-button:hover {
+button.btn:hover {
   background-color: #555;
 }

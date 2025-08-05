@@ -30,11 +30,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
-            - name: Commit and push sitemap.xml
+      - name: Commit and push sitemap.xml
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || echo "No changes to commit"
-          git pull --rebase origin main  # ⚠️ 원격 변경사항 먼저 가져오기
-          git push origin main --force  # ⚠️ 강제 푸시
+          git pull --rebase origin main
+          git push origin main --force

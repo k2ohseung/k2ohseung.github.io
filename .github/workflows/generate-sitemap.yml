@@ -24,15 +24,14 @@ jobs:
       - name: Generate sitemap
         run: python generate-sitemap.py
 
-      - name: Set up Git for push
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull origin main --rebase
 
-      - name: Commit and push sitemap
+      - name: Commit and force push sitemap.xml
         run: |
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || echo "No changes to commit"
-          git push origin main
+          git push origin main --force

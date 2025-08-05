@@ -3,7 +3,7 @@ name: Generate sitemap
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # 매일 9AM KST
 
 permissions:
   contents: write
@@ -23,6 +23,9 @@ jobs:
 
       - name: Generate sitemap
         run: python generate-sitemap.py
+
+      - name: Authenticate for push
+        run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
       - name: Commit and push sitemap
         run: |

@@ -21,10 +21,16 @@ nav {
   background: #555;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+
+  /* 👇 고정 관련 스타일 */
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  /* 👇 테두리와 그림자 추가 */
+  border-bottom: 2px solid #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 nav a {
   color: white;

@@ -1,7 +1,7 @@
 import datetime
 
-# 날짜 + 시간 (시:분:초까지)
-today = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+# 오늘 날짜 형식: YYYY-MM-DD
+today = datetime.date.today().strftime('%Y-%m-%d')
 
 # 사이트맵 템플릿
 sitemap_template = f'''<?xml version="1.0" encoding="UTF-8"?>

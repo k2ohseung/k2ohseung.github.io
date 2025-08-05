@@ -22,15 +22,12 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  /* 👇 고정 관련 스타일 */
-  position: sticky;
+  position: fixed;        /* ✅ 항상 화면 상단에 고정 */
   top: 0;
+  width: 100%;
   z-index: 1000;
-
-  /* 👇 테두리와 그림자 추가 */
-  border-bottom: 2px solid #444;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #444;   /* ✅ 테두리 효과 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* ✅ 살짝 그림자 */
 }
 nav a {
   color: white;
@@ -45,6 +42,7 @@ nav a:hover {
 /* 본문 섹션 */
 section {
   padding: 2rem;
+  padding-top: 6rem;  /* ✅ 메뉴바 높이만큼 여백 추가 (중요) */
   max-width: 800px;
   margin: auto;
 }
@@ -77,6 +75,7 @@ img {
   }
   section {
     padding: 1rem;
+    padding-top: 6rem; /* 고정 메뉴 고려 */
   }
   header, footer {
     padding: 1rem;

@@ -21,7 +21,10 @@ nav {
   background: #555;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 nav a {
   color: white;

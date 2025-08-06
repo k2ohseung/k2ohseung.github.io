@@ -56,11 +56,11 @@ nav {
   background-color: #f4f4f4;
   display: flex;
   justify-content: space-around;
-  flex-wrap: nowrap; /* 줄바꿈 방지 */
+  flex-wrap: nowrap;
   padding: 0.75rem 0;
   z-index: 1000;
-  border-bottom: 1px solid #ccc; /* 하단 테두리 */
-  overflow-x: auto; /* 모바일에서 넘치면 스크롤 */
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 하단 테두리 효과 */
 }
 
 nav a {
@@ -70,6 +70,8 @@ nav a {
   padding: 0.4rem 0.6rem;
   font-size: 0.85rem;
   white-space: nowrap;
+  min-width: 80px; /* 너비 보장 */
+  text-align: center;
 }
 
 /* 섹션 공통 */
@@ -133,12 +135,10 @@ footer {
 }
 
 /* 반응형 대응 */
-@media (max-width: 360px) {
-  nav {
-    font-size: 0.75rem;
-  }
-
+@media (max-width: 400px) {
   nav a {
+    font-size: 0.75rem;
     padding: 0.3rem 0.5rem;
+    min-width: 70px;
   }
 }

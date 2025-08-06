@@ -56,10 +56,22 @@ nav {
   background-color: #f4f4f4;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 줄바꿈 방지 */
   padding: 0.75rem 0;
   z-index: 1000;
+  border-bottom: 1px solid #ccc; /* 테두리 추가 */
+  overflow-x: auto; /* 작은 화면에서 스크롤 허용 */
 }
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
 
 nav a {
   text-decoration: none;

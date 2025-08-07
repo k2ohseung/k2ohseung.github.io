@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ジョンガチプ黒ヤギスープ｜テグの黒ヤギ健康料理専門店</title>
-  <base href="/"> 
 
   <meta name="description" content="テグ・パルダル市場近くの伝統的な滋養料理専門店。臭みのない本格ヤギスープ、ジョンガチプ黒ヤギスープ！" />
   <meta name="keywords" content="ヤギスープ, テグ滋養料理, パルダル市場, ジョンガチプ, 健康食, 黒ヤギ, ヤギ鍋" />
@@ -117,9 +116,12 @@
 
   <script>
     function changeLanguage(lang) {
-      const currentPath = window.location.pathname;
-      const target = lang === 'ko' ? 'index.html' : 'index-ja.html';
-      window.location.href = target + window.location.hash;
+      const hash = window.location.hash || '';
+      if (lang === 'ko') {
+        window.location.href = '/index.html' + hash;
+      } else if (lang === 'ja') {
+        window.location.href = '/index-ja.html' + hash;
+      }
     }
   </script>
 </body>

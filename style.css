@@ -157,3 +157,24 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
+.footer-lang-switch {
+  margin-top: 1rem;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.footer-lang-switch button {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.footer-lang-switch button:hover {
+  background-color: #666;
+}

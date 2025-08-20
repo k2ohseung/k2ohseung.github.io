@@ -178,4 +178,35 @@ footer {
 .footer-lang-switch button:hover {
   background-color: #666;
 }
+/* 지도 버튼 공통 스타일 */
+.map-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.map-button {
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.map-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* 브랜드 컬러 */
+.map-button.google {
+  background: #4285F4; /* Google 파랑 */
+}
+
+.map-button.naver {
+  background: #2DB400; /* Naver 초록 */
+}
 

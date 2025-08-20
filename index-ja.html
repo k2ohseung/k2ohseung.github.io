@@ -35,14 +35,13 @@
   </nav>
 
   <section id="home">
-  <h2>ジョンガチプ黒ヤギスープ専門店へようこそ</h2>
-  <p>
-    <strong>自家飼育の国産黒ヤギ</strong>だけを使用し、<br>
-    <strong>臭みを完全に取り除いた</strong>、健康と滋養に最適な黒ヤギスープをご提供しております。<br>
-    本場の味と安心の品質を、ぜひお楽しみください。
-  </p>
-</section>
-
+    <h2>ジョンガチプ黒ヤギスープ専門店へようこそ</h2>
+    <p>
+      <strong>自家飼育の国産黒ヤギ</strong>だけを使用し、<br>
+      <strong>臭みを完全に取り除いた</strong>、健康と滋養に最適な黒ヤギスープをご提供しております。<br>
+      本場の味と安心の品質を、ぜひお楽しみください。
+    </p>
+  </section>
 
   <section id="menu">
     <h2>メニュー案内</h2>
@@ -91,9 +90,14 @@
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgevy_NcJaWl-cS6krGS8MnLg_Rj6-QN0&q=종가집흑염소탕,대구광역시">
     </iframe>
 
-    <div style="margin-top: 1rem;">
-      <a href="https://www.google.com/maps/search/?api=1&query=대구+종가집흑염소" target="_blank">🧭 Googleマップ</a>
-      <a href="https://map.naver.com/v5/search/종가집흑염소탕" target="_blank">🧭 Naverマップ</a>
+    <!-- 지도 버튼 -->
+    <div class="map-buttons">
+      <a href="https://www.google.com/maps/search/?api=1&query=대구+종가집흑염소" target="_blank" class="map-button google">
+        🧭 Googleマップで開く
+      </a>
+      <a href="https://map.naver.com/v5/search/종가집흑염소탕" target="_blank" class="map-button naver">
+        🧭 Naverマップで開く
+      </a>
     </div>
 
     <h3>地下鉄でのアクセス</h3>
@@ -116,11 +120,10 @@
 
   <footer>
     <p>&copy; 2025 ジョンガチプ黒ヤギスープ. All rights reserved.</p>
-    
     <div class="footer-lang-switch">
-    <button onclick="changeLanguage('ko')">한국어</button>
-    <button onclick="changeLanguage('ja')">日本語</button>
-  </div>
+      <button onclick="changeLanguage('ko')">한국어</button>
+      <button onclick="changeLanguage('ja')">日本語</button>
+    </div>
   </footer>
 
   <script>

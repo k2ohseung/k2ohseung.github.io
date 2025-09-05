@@ -1,4 +1,4 @@
-/* 기본 설정 */
+/* ---------------- 기본 설정 ---------------- */
 body {
   font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
@@ -8,26 +8,29 @@ body {
   color: #333;
 }
 
-/* 헤더 */
+/* ---------------- 헤더 ---------------- */
 header {
   background: #3c3f58;
   color: white;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 header p {
   margin: 0.5rem 0 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
-/* 언어 전환 버튼 */
+/* ---------------- 언어 전환 버튼 ---------------- */
 .language-switch {
   display: flex;
   justify-content: center;
@@ -39,146 +42,127 @@ header p {
   background-color: #3c3f58;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .language-switch .btn:hover {
   background-color: #2a2d42;
+  transform: translateY(-2px);
 }
 
-/* -------- PC: 고정 네비게이션 -------- */
+/* ---------------- PC: 고정 네비게이션 ---------------- */
 nav {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background-color: #f4f4f4;
-  border: 2px solid #666; /* 더 진한 테두리 */
-  border-radius: 8px;
-  padding: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* PC용 링크 스타일 */
 nav a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.95rem;
   white-space: nowrap;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
-/* 모바일 버전 대응 */
+nav a:hover {
+  background: #eee;
+}
+
+/* ---------------- 모바일 네비게이션 ---------------- */
 @media (max-width: 768px) {
   nav {
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     border: none;
     border-radius: 0;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0.75rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
 
   nav a {
-    padding: 0.5rem;
+    padding: 0.6rem;
     font-size: 1rem;
   }
 }
 
-/* 섹션 */
+/* ---------------- 섹션 ---------------- */
 section {
-  padding: 2.5rem 1rem 2rem;
+  padding: 3rem 1.2rem 2.5rem;
   max-width: 900px;
   margin: auto;
 }
 
-/* 제목 */
 section h2 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid #ccc;
+  font-size: 1.7rem;
+  border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #3c3f58;
 }
 
 /* 홈 섹션 - 네비게이션 겹침 방지 */
 #home {
-  padding-top: 4.5rem;  /* 네비게이션 겹침 방지 */
+  padding-top: 5rem;
 }
 
-/* 메뉴 */
+/* ---------------- 메뉴 ---------------- */
 #menu ul {
   list-style: none;
   padding: 0;
 }
 
 #menu li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
 #menu h3 {
   margin: 0.3rem 0;
+  font-size: 1.3rem;
+  color: #2a2d42;
 }
 
 #menu p {
   margin: 0.2rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
-/* 지도 */
+/* ---------------- 지도 ---------------- */
 iframe {
   width: 100%;
   height: 320px;
   border: none;
   margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* 문의 */
-#contact p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* 푸터 */
-footer {
-  background: #f4f4f4;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-}
-.footer-lang-switch {
-  margin-top: 1rem;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-.footer-lang-switch button {
-  padding: 4px 10px;
-  font-size: 0.85rem;
-  background-color: #444;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.footer-lang-switch button:hover {
-  background-color: #666;
-}
-/* 지도 버튼 공통 스타일 */
+/* 지도 버튼 */
 .map-buttons {
   margin-top: 1rem;
   display: flex;
@@ -189,24 +173,56 @@ footer {
 .map-button {
   text-decoration: none;
   color: white;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   font-weight: bold;
+  font-size: 0.95rem;
   display: inline-block;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .map-button:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* 브랜드 컬러 */
-.map-button.google {
-  background: #4285F4; /* Google 파랑 */
+.map-button.google { background: #4285F4; }
+.map-button.naver { background: #2DB400; }
+
+/* ---------------- 문의 ---------------- */
+#contact p {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.map-button.naver {
-  background: #2DB400; /* Naver 초록 */
+/* ---------------- 푸터 ---------------- */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
 }
 
+.footer-lang-switch {
+  margin-top: 1rem;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.footer-lang-switch button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #3c3f58;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.footer-lang-switch button:hover {
+  background-color: #2a2d42;
+}

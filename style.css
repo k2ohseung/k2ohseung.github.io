@@ -268,4 +268,67 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+/* ===================== */
+/* PC용 햄버거 + 사이드네비 */
+/* ===================== */
 
+/* 햄버거 버튼 */
+.menu-btn {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1200;
+  display: none;                /* 데스크탑에서만 보임 (미디어쿼리에서 override) */
+  color: #3c3f58;
+  background: #ffffff;
+  border: 2px solid #3c3f58;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+.menu-btn:hover {
+  background: #3c3f58;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 우측 사이드 네비 */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -280px;    /* 숨김 상태 */
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -6px 0 20px rgba(0,0,0,0.12);
+  transition: right 0.28s cubic-bezier(.2,.9,.3,1);
+  z-index: 1190;
+  padding-top: 3.5rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.side-nav.open { right: 0; }
+
+.side-nav a {
+  display: block;
+  padding: 1rem 1.2rem;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 1px solid #f0f0f0;
+}
+.side-nav a:hover { background: #fafafa; }
+
+/* 데스크탑 전용 */
+@media (min-width: 768px) {
+  nav.mobile-nav { display: none; } /* 기존 nav 숨김 */
+  .menu-btn { display: block; }
+}
+
+/* 모바일에서는 기존 nav 유지 */
+@media (max-width: 767px) {
+  .side-nav { display: none; }
+}

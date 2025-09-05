@@ -233,3 +233,53 @@ footer {
 .footer-lang-switch button:hover {
   background-color: #777;
 }
+
+/* 메인 배너 (Hero Section) */
+.hero {
+  position: relative;
+  height: 60vh; /* 화면의 60% 차지 */
+  background: url("main-image.jpg") no-repeat center center / cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 어두운 오버레이 */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #e63946;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #c92a3b;
+}

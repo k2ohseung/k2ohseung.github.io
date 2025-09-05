@@ -1,4 +1,4 @@
-<!-- index.html (PC용 슬라이드 네비게이션 적용) -->
+<!-- index.html (SEO 강화 버전, hero 제거) -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,11 +7,13 @@
 
   <title>종가집 흑염소탕 | 대구 염소탕 · 보양식 전문</title>    
   <meta name="description" content="대구 팔달시장 인근 염소탕 전문점. 국내산 흑염소로 만든 전통 보양식 흑염소탕, 잡내 없는 깊은 국물 맛을 경험해보세요." />
-  <meta name="keywords" content="대구 염소탕, 대구 흑염소탕, 팔달시장 염소탕, 팔달시장 흑염소, 보양식, 흑염소, 흑염소 수육" />
+  <meta name="keywords" content="대구 염소탕, 대구 흑염소탕, 보양식, 흑염소, 팔달시장 맛집, 흑염소 수육" />
   
+  <!-- 소유확인 -->
   <meta name="naver-site-verification" content="6e6ff3715e46f3db50fb1a8e50e240be0b75c45a" />
   <meta name="google-site-verification" content="NfPrqNZ_h8Vgif-l_ZU8xHU9ucwL6-mNZrxmVCVPxB0" />
-  
+
+  <!-- 오픈그래프 -->
   <meta property="og:image" content="https://k2ohseung.github.io/main-image.jpg" />
   <meta property="og:title" content="대구 염소탕 · 흑염소탕 전문 보양식" />
   <meta property="og:description" content="팔달시장 인근 흑염소탕 전문점. 건강과 맛을 모두 잡은 대구 대표 보양식." />
@@ -19,52 +21,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
-
-  <style>
-    /* 공통 스타일 */
-    body { margin:0; font-family: sans-serif; }
-    header { text-align:center; padding:1.5rem; }
-    nav a { display:block; padding:1rem; text-decoration:none; color:#333; }
-    nav a:hover { background:#f0f0f0; }
-
-    /* PC용 햄버거 버튼 */
-    .menu-btn {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1001;
-      display: none; /* 모바일에서는 안 보이게 */
-    }
-
-    /* 슬라이드 네비게이션 */
-    .side-nav {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100%;
-      background: #fff;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-      transition: right 0.3s ease;
-      z-index: 1000;
-    }
-    .side-nav.open { right: 0; }
-
-    /* 모바일일 때 기존 메뉴 보이게 */
-    nav.mobile-nav {
-      display: block;
-      background: #fafafa;
-      border-top: 1px solid #ddd;
-    }
-
-    /* PC일 때는 모바일 nav 숨김, 햄버거 버튼 보임 */
-    @media(min-width: 768px) {
-      nav.mobile-nav { display: none; }
-      .menu-btn { display: block; }
-    }
-  </style>
 </head>
 
 <body>
@@ -74,30 +30,20 @@
   </header>
 
   <!-- 언어 전환 -->
-  <div class="language-switch" style="text-align:center; margin: 1rem 0;">
+  <div class="language-switch">
     <button class="btn" onclick="changeLanguage('ko')">한국어</button>
     <button class="btn" onclick="changeLanguage('ja')">日本語</button>
   </div>
 
-  <!-- 모바일 전용 메뉴 -->
-  <nav class="mobile-nav">
+  <!-- 네비게이션 -->
+  <nav>
     <a href="#home">홈</a>
     <a href="#menu">메뉴</a>
     <a href="#map">오시는 길</a>
     <a href="#contact">예약 / 문의</a>
   </nav>
 
-  <!-- PC 햄버거 버튼 -->
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-  <!-- PC 슬라이드 메뉴 -->
-  <div class="side-nav" id="sideNav">
-    <a href="#home" onclick="closeMenu()">홈</a>
-    <a href="#menu" onclick="closeMenu()">메뉴</a>
-    <a href="#map" onclick="closeMenu()">오시는 길</a>
-    <a href="#contact" onclick="closeMenu()">예약 / 문의</a>
-  </div>
-
+  <!-- 소개 -->
   <section id="home">
     <h2>대구 흑염소탕 · 염소탕 전문</h2>
     <p>
@@ -108,33 +54,63 @@
     </p>
   </section>
 
+  <!-- 메뉴 -->
   <section id="menu">
     <h2>메뉴 안내</h2>
-    <ul style="list-style:none; padding-left:0;">
-      <li><h3>염소탕</h3><p>보통: 15,000원 / 특: 17,000원</p></li>
-      <li><h3>염소진국</h3><p>보통: 15,000원 / 특: 17,000원</p></li>
-      <li><h3>염소수육</h3><p>소: 40,000원 / 중: 50,000원 / 대: 60,000원</p></li>
-      <li><h3>염소전골</h3><p>소: 50,000원 / 중: 60,000원 / 대: 70,000원</p></li>
-      <li><h3>염소 엑기스</h3><p>900,000원 (별도 문의)</p></li>
-      <li><h3>음료 / 주류</h3><p>소주, 맥주, 막걸리 – 각 4,000원<br/>음료수 – 2,000원 / 공기밥 – 1,000원</p></li>
-      <li><strong>※ 포장 가능합니다 (2인분 이상 주문)</strong></li>
-      <li><strong>※ 전 메뉴 국내산 흑염소만 사용합니다.</strong></li>
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="margin-bottom: 1rem;">
+        <h3>염소탕</h3>
+        <p>보양식의 대표 메뉴, 진한 국물과 부드러운 고기</p>
+        <p><strong>보통:</strong> 15,000원 / <strong>특:</strong> 17,000원</p>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <h3>염소진국</h3>
+        <p>더 깊고 진하게 끓여낸 고농축 흑염소탕</p>
+        <p><strong>보통:</strong> 15,000원 / <strong>특:</strong> 17,000원</p>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <h3>염소수육</h3>
+        <p>국내산 흑염소로 만든 부드럽고 촉촉한 수육</p>
+        <p><strong>소:</strong> 40,000원 / <strong>중:</strong> 50,000원 / <strong>대:</strong> 60,000원</p>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <h3>염소전골</h3>
+        <p>채소와 함께 푸짐하게 끓인 얼큰한 흑염소 전골</p>
+        <p><strong>소:</strong> 50,000원 / <strong>중:</strong> 60,000원 / <strong>대:</strong> 70,000원</p>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <h3>염소 엑기스</h3>
+        <p>고농축 흑염소 엑기스 (가정용 보양식, 대용량)</p>
+        <p><strong>900,000원</strong> – 별도 문의</p>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <h3>음료 / 주류</h3>
+        <p>소주, 맥주, 막걸리 – 각 4,000원<br/>음료수 – 2,000원 / 공기밥 – 1,000원</p>
+      </li>
+      <li>
+        <p><strong>※ 포장 가능합니다 (2인분 이상 주문)</strong></p>
+        <p><strong>※ 전 메뉴 국내산 흑염소만 사용합니다.</strong></p>
+      </li>
     </ul>
   </section>
 
+  <!-- 오시는 길 -->
   <section id="map">
     <h2>오시는 길</h2>
     <p><strong>주소:</strong> 대구광역시 북구 팔달로37길 11 (팔달시장 인근)</p>
     <iframe width="100%" height="320" style="border:0;" loading="lazy"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgevy_NcJaWl-cS6krGS8MnLg_Rj6-QN0&q=종가집+흑염소탕"></iframe>
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgevy_NcJaWl-cS6krGS8MnLg_Rj6-QN0&q=종가집+흑염소탕">
+    </iframe>
     <p><a href="https://map.naver.com/v5/search/종가집 흑염소탕" target="_blank">🧭 네이버 지도에서 검색하기</a></p>
   </section>
 
+  <!-- 예약 -->
   <section id="contact">
     <h2>예약 / 문의</h2>
     <p>📞 전화: 053-352-7135<br>⏰ 영업시간: 오전 8시 ~ 오후 9시</p>
   </section>
 
+  <!-- 푸터 -->
   <footer>
     <p>&copy; 2025 대구 염소탕 전문점. All rights reserved.</p>
     <div class="footer-lang-switch">
@@ -147,12 +123,6 @@
     function changeLanguage(lang) {
       const path = lang === 'ko' ? 'index.html' : 'index-ja.html';
       window.location.href = path;
-    }
-    function toggleMenu() {
-      document.getElementById("sideNav").classList.toggle("open");
-    }
-    function closeMenu() {
-      document.getElementById("sideNav").classList.remove("open");
     }
   </script>
 </body>
